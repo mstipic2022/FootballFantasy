@@ -1,5 +1,0 @@
-GET http://localhost:8080/api/ping
-
-###
-
-GET http://localhost:8080/api/ping/1
