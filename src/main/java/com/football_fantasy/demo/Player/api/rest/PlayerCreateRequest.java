@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 
 public record PlayerCreateRequest(
-         String name,
+        String name,
         Position position,
         String team,
         String nationalteam,

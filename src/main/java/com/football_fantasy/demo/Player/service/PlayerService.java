@@ -1,7 +1,7 @@
 package com.football_fantasy.demo.player.service;
 
-import com.football_fantasy.demo.player.repository.Player;
 import com.football_fantasy.demo.player.PlayerMapper;
+import com.football_fantasy.demo.player.repository.Player;
 import com.football_fantasy.demo.player.repository.PlayerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,15 +23,13 @@ public class PlayerService {
     public void createPlayer(PlayerCreateDto playerCreateDto) {
         var player = PlayerMapper.map(playerCreateDto);
         playerRepository.save(player);
-        String trackingId = MDC.get("trackingId");
-        log.info("Created playerId={}, trackingId={}", player.getId(), trackingId);
+        log.info("Created playerId={}", player.getId());
     }
 
     @Transactional(readOnly = true)
     public List<Player> fetchPlayers() {
         List<Player> players = playerRepository.findAll();
-        String trackingId = MDC.get("trackingId");
-        log.info("Fetched players: {}, trackingId={}", players, trackingId);
+        log.info("Fetched players: {}", players);
         return players;
     }
 
@@ -44,14 +42,12 @@ public class PlayerService {
         player.setNationalteam(playerUpdateDto.nationalteam());
         player.setDob(playerUpdateDto.dob());
         playerRepository.save(player);
-        String trackingId = MDC.get("trackingId");
-        log.info("Updated playerId={}, trackingId={}", player.getId(), trackingId);
+        log.info("Updated playerId={}", player.getId());
     }
 
     @Transactional
     public void deletePlayer(Long id) {
         playerRepository.deleteById(id);
-        String trackingId = MDC.get("trackingId");
-        log.info("Deleted playerId={}, trackingId={}", id, trackingId);
+        log.info("Deleted playerId={}", id);
     }
 }
