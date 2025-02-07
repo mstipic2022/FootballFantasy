@@ -1,0 +1,23 @@
+spring:
+    application.name: demo
+    jpa:
+        hibernate.ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                default_schema: marko
+    datasource:
+        url: jdbc:postgresql://localhost:5433/FootballFantasy?currentSchema=marko
+        username: postgres
+        password: admin
+    management:
+        endpoints:
+            web:
+                exposure:
+                    include: "*"
+        tracing:
+            sampling:
+                probability: 1.0
+            http:
+                exporter:
+                    endpoint: "http://localhost:4317"

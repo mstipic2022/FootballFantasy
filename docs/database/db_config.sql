@@ -1,17 +1,15 @@
-/*CREATE TABLE Player (
+CREATE TABLE Player (
                         id SERIAL PRIMARY KEY,
-                        first_name VARCHAR(50) NOT NULL,
-                        last_name VARCHAR(50) NOT NULL,
-                        birth_year INTEGER NOT NULL,
+                        name VARCHAR(50) NOT NULL,
                         position VARCHAR(50) NOT NULL,
-                        current_club VARCHAR(50),
-                        national_team VARCHAR(50)
+                        team VARCHAR(50),
+                        nationalteam VARCHAR(50),
+                        dob DATE NOT NULL
 );
 
 
-INSERT INTO Player (first_name, last_name, birth_year, position, current_club, national_team)
-VALUES
-    ('Luka', 'Modric', 1985, 'Midfielder', 'Real Madrid', 'Croatia'),
-    ('Lionel', 'Messi', 1987, 'Forward', 'Paris Saint-Germain', 'Argentina'),
-    ('Cristiano', 'Ronaldo', 1985, 'Forward', 'Manchester United', 'Portugal');*/
+INSERT INTO Player (name, position, team, nationalteam, dob) VALUES
+    ('Luka Modric', 'CM', 'Real Madrid', 'Croatia', '2008-11-11'),
+    ('Lionel Messi', 'RW', 'Inter Miami', 'Argentina', '2008-11-11'),
+    ('Cristiano Ronaldo', 'ST', 'Al Nasser', 'Portugal', '2008-11-11');
 
