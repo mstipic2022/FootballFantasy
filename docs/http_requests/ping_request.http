@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/player/v1/players
+GET http://localhost:8080/api/players/v1/
 
 ###
 

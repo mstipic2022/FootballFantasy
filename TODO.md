@@ -1,0 +1,2 @@
+- dodaj Position enum na svim layerima
+- 
