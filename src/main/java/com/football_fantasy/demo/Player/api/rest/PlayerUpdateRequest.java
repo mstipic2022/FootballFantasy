@@ -8,6 +8,7 @@ public record PlayerUpdateRequest (String name,
                                    Position position,
                                    String team,
                                    String nationalteam,
-                                   LocalDate dob
+                                   LocalDate dob,
+                                   Long version
 ) {
 }

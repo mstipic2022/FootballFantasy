@@ -15,7 +15,8 @@ public final class PlayerMapper {
                 playerUpdateRequest.position(),
                 playerUpdateRequest.team(),
                 playerUpdateRequest.nationalteam(),
-                playerUpdateRequest.dob());
+                playerUpdateRequest.dob(),
+                playerUpdateRequest.version());
     }
 
     public static PlayerCreateDto map(PlayerCreateRequest playerCreateRequest) {

@@ -41,6 +41,7 @@ public class PlayerService {
         player.setTeam(playerUpdateDto.team());
         player.setNationalteam(playerUpdateDto.nationalteam());
         player.setDob(playerUpdateDto.dob());
+        //player.setVersion(playerUpdateDto.version());
         playerRepository.save(player);
         log.info("Updated playerId={}", player.getId());
     }

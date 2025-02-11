@@ -1,2 +1,3 @@
 - dodaj Position enum na svim layerima
-- 
+- preimenuj sve na engleske nazive
+- ne radi optimistic locking

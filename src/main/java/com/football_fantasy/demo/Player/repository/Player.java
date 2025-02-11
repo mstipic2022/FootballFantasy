@@ -35,7 +35,7 @@ public class Player {
     @Column(name = "dob")
     private LocalDate dob;
 
-    @Column(name = "verzija")
+    @Column(name = "version")
     @Version
     private Long version;
 
