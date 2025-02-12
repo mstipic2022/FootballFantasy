@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/player/v1/players
+GET http://localhost:8080/api/players/v1/
 
 ###
 
-POST http://localhost:8080/api/player/v1
+POST http://localhost:8080/api/players/v1
 Content-Type: application/json
 
 {
@@ -15,18 +15,19 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/api/player/v1/4
+PUT http://localhost:8080/api/players/v1/8
 Content-Type: application/json
 
 {
-  "name": "Petar Sucic",
-  "position": "CB",
-  "team": "Manchester United",
+  "name": "Marko Jankovic",
+  "position": "ST",
+  "team": "Manchester City",
   "nationalTeam": "Serbia",
-  "dob": "1997-08-01"
+  "dob": "1997-08-01",
+  "version": 0
 }
 
 ###
 
-DELETE http://localhost:8080/api/player/v1/3
+DELETE http://localhost:8080/api/players/v1/3
 }

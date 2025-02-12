@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    @ExceptionHandler(org.springframework.dao.OptimisticLockingFailureException.class)
+/*    @ExceptionHandler(org.springframework.dao.OptimisticLockingFailureException.class)
     public ResponseEntity<String> handleOptimisticLockingFailure(Exception e) {
-        logger.error("Optimistic Locking Failure: {}", e.getMessage());
+        log.error("Optimistic Locking Failure: {}", e.getMessage());
         return ResponseEntity.status(HttpStatus.CONFLICT)
                 .body("Optimistic Locking Conflict - Someone else has updated this record.");
-    }
+    }*/
 }
 
